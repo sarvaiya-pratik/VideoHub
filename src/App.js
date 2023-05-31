@@ -1,24 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+
+import { BrowserRouter as Router,Route,Routes } from 'react-router-dom';
+// import { Button } from '@chakra-ui/react';
+import ColorModeSwitcher from './ColorModeSwitcher';
+import Header from './components/Header';
+import Home from './components/Home';
+import Footer from './components/Footer';
+import Video from './components/Video';
+import Login from './components/Login';
+import SignUp from './components/SignUp';
+import Upload from './components/Upload';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+ <Header/>
+
+    <ColorModeSwitcher/>
+   
+      <Routes>
+        <Route path="/" element={<Home/>}/>
+        <Route path="/video" element={<Video/>}/>
+        <Route path="/login" element={<Login/>}/>
+        <Route path="/signup" element={<SignUp/>}/>
+        <Route path="/upload" element={<Upload/>}/>
+      </Routes>
+      <Footer/>
+    </Router>
   );
 }
 
