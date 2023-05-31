@@ -19,17 +19,17 @@ const Home = () => {
     return (
         <Box>
 
-            <Carousel autoPlay infiniteLoop interval={1000} showThumbs={false} showArrows={false} showStatus={false}>
-                <Box w="full" h="100vh">
+            <Carousel preventMovementUntilSwipeScrollTolerance={true} autoPlay infiniteLoop interval={3000} showThumbs={false} showArrows={false} swipeScrollTolerance={100} showStatus={false}>
+                <Box w="full" h="full">
                     <Image src={img1} h='100%' objectFit='cover' />
                     <Heading bgColor={'blackAlpha.600'} color="white" {...headingOpation}>Watch  the Feture</Heading>
                 </Box>
                 <Box w="full" h="100vh">
-                    <Image src={img2}  h='100%' objectFit='cover'/>
+                    <Image src={img2}  h='full' objectFit='cover'/>
                     <Heading bgColor={'blackAlpha.600'} color="white" {...headingOpation}>Watch  the Feture</Heading>
                 </Box>
                 <Box w="full" h="100vh" >
-                    <Image src={img3} h='100%' objectFit='cover'/>
+                    <Image src={img3} h='full' objectFit='cover'/>
                     <Heading bgColor={'blackAlpha.600'} color="white" {...headingOpation}>Watch  the Feture</Heading>
                 </Box>
             </Carousel>
